@@ -1,0 +1,12 @@
+{
+  "name": "Deploy Web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple HTML deployment service using Vercel API",
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "formidable": "^3.5.4"
+  }
+}
