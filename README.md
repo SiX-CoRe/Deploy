@@ -8,7 +8,7 @@
   <a href="https://github.com/SiX-CoRe/Deploy">
     <img src="https://img.shields.io/github/stars/SiX-CoRe/Deploy?style=for-the-badge" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/SiX-CoRe/deploysxc">
+  <a href="https://github.com/SiX-CoRe/Deploy">
     <img src="https://img.shields.io/github/forks/SiX-CoRe/Deploy?style=for-the-badge" alt="GitHub Forks">
   </a>
   <a href="https://github.com/SiX-CoRe/Deploy">
