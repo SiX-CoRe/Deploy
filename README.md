@@ -5,14 +5,14 @@
 </p><p align="center">
   Deploy websites, upload projects, and manage domains with a simple workflow.
 </p><p align="center">
-  <a href="https://github.com/SiX-CoRe/deploysxc">
-    <img src="https://img.shields.io/github/stars/SiX-CoRe/deploysxc?style=for-the-badge" alt="GitHub Stars">
+  <a href="https://github.com/SiX-CoRe/Deploy">
+    <img src="https://img.shields.io/github/stars/SiX-CoRe/Deploy?style=for-the-badge" alt="GitHub Stars">
   </a>
   <a href="https://github.com/SiX-CoRe/deploysxc">
-    <img src="https://img.shields.io/github/forks/SiX-CoRe/deploysxc?style=for-the-badge" alt="GitHub Forks">
+    <img src="https://img.shields.io/github/forks/SiX-CoRe/Deploy?style=for-the-badge" alt="GitHub Forks">
   </a>
-  <a href="https://github.com/SiX-CoRe/deploysxc">
-    <img src="https://img.shields.io/github/license/SiX-CoRe/deploysxc?style=for-the-badge" alt="License">
+  <a href="https://github.com/SiX-CoRe/Deploy">
+    <img src="https://img.shields.io/github/license/SiX-CoRe/Deploy?style=for-the-badge" alt="License">
   </a>
 </p>---
 
