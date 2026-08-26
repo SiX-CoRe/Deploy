@@ -97,7 +97,7 @@ Depending on your implementation, DeploySxC can be integrated with:
 
 Clone the repository:
 
-git clone https://github.com/SiX-CoRe/deploysxc.git
+git clone https://github.com/SiX-CoRe/Deploy.git
 
 Enter the project directory:
 
