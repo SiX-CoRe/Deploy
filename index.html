@@ -3,171 +3,867 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Deploy Website</title>
-  <meta name="description" content="Deploy website HTML secara gratis dan mudah.">
+
+  <title>Free Deploy Website HTML Gratis | SxC Deploy</title>
+
+  <meta name="description" content="Free Deploy Website HTML gratis dan mudah. Upload index.html dan deploy website kamu dengan cepat menggunakan SxC Free Deploy.">
+  <meta name="keywords" content="free deploy website, deploy html gratis, hosting html gratis, upload website gratis, deploy website gratis, hosting website gratis, free html hosting, SxC deploy">
+  <meta name="author" content="Lumnztyz6x">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#080a08">
+  <link rel="canonical" href="https://deploysxc.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Deploy Website HTML Gratis | SxC Deploy">
+  <meta property="og:description" content="Upload index.html dan deploy website kamu secara gratis dengan mudah.">
+  <meta property="og:url" content="https://deploysxc.vercel.app/">
+  <meta property="og:site_name" content="SxC Free Deploy">
+  <meta property="og:image" content="https://files.catbox.moe/wnfsgc.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Deploy Website HTML Gratis">
+  <meta name="twitter:description" content="Deploy website HTML secara gratis dan mudah dengan SxC Free Deploy.">
+  <meta name="twitter:image" content="https://files.catbox.moe/wnfsgc.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SxC Free Deploy",
+    "url": "https://deploysxc.vercel.app/",
+    "description": "Free deploy website HTML gratis dan mudah. Upload index.html dan deploy website kamu.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "author": {
+      "@type": "Person",
+      "name": "Lumnztyz6x"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "IDR"
+    }
+  }
+  </script>
+
   <style>
-    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-    :root{--bg:#080a08;--card:#101310;--card2:#151815;--border:rgba(255,255,255,.08);--text:#f4f4f4;--muted:#8d938d;--green:#a8e600;--green2:#c5ff3d}
-    body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% -10%,rgba(168,230,0,.1),transparent 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .page{width:100%;max-width:540px;margin:auto;padding:18px}
-    .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-    .brand{display:flex;align-items:center;gap:10px}.logo{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--green);color:#0b0d08;font-weight:900;font-size:17px}
-    .brand-text strong{display:block;font-size:15px}.brand-text span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-    .status{display:flex;align-items:center;gap:6px;font-size:11px;color:#9bd400;background:rgba(168,230,0,.07);border:1px solid rgba(168,230,0,.13);padding:7px 10px;border-radius:999px}
-    .status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
-    .hero{position:relative;overflow:hidden;border-radius:22px;border:1px solid var(--border);background:#0d0f0d;margin-bottom:18px}
-    .hero img{display:block;width:100%;aspect-ratio:13/9;object-fit:cover}
-    .hero-overlay{position:absolute;inset:auto 0 0 0;padding:28px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.85))}
-    .hero-title{font-size:25px;font-weight:900;letter-spacing:-.8px}.hero-subtitle{margin-top:5px;color:#c7c7c7;font-size:13px}
-    .card,.info-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:15px;box-shadow:0 12px 35px rgba(0,0,0,.18)}
-    .credit{text-align:center;color:#626762;font-size:12px;margin:2px 0 20px}.section-title{font-size:17px;font-weight:800;margin-bottom:5px}.section-description{color:var(--muted);font-size:12px;line-height:1.6;margin-bottom:20px}
-    label{display:block;margin:16px 0 8px;font-size:12px;color:#cfd3cf;font-weight:700}
-    input[type=text]{width:100%;height:48px;padding:0 14px;border:1px solid var(--border);border-radius:13px;outline:none;background:var(--card2);color:white;font-size:14px}
-    input[type=text]:focus{border-color:rgba(168,230,0,.55);box-shadow:0 0 0 3px rgba(168,230,0,.06)}
-    .upload-box{position:relative;border:1px dashed rgba(168,230,0,.28);border-radius:15px;background:rgba(168,230,0,.025);padding:20px 14px;text-align:center;cursor:pointer;transition:.2s}
-    .upload-box:hover,.upload-box.dragover{border-color:var(--green);background:rgba(168,230,0,.07)}
-    .upload-icon{width:42px;height:42px;border-radius:12px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;background:rgba(168,230,0,.1);font-size:19px}
-    .upload-title{font-size:13px;font-weight:700}.upload-info{color:var(--muted);font-size:11px;margin-top:5px}.file-name{margin-top:12px;color:var(--green2);font-size:11px;word-break:break-all}
-    #htmlFile{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-    .deploy-btn{width:100%;height:50px;margin-top:18px;border:0;border-radius:14px;background:var(--green);color:#0b0d08;font-size:14px;font-weight:900;cursor:pointer;transition:.2s}
-    .deploy-btn:hover{background:var(--green2);transform:translateY(-1px)}.deploy-btn:active{transform:scale(.98)}.deploy-btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
-    #result{display:none;margin-top:14px;padding:13px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid var(--border);font-size:12px;line-height:1.6;word-break:break-word}
-    #result.show{display:block}#result.success{color:#caff58}#result.error{color:#ff8585}#result.loading{color:#d6d6d6}#result a{color:var(--green2);text-decoration:none;font-weight:700}
-    .info-title{font-size:14px;font-weight:800;margin-bottom:12px}.rules{display:grid;gap:9px}.rule{display:flex;align-items:flex-start;gap:9px;color:#aeb3ae;font-size:12px;line-height:1.5}.rule-icon{color:var(--green);flex-shrink:0}
-    .contact-list{display:grid;gap:9px}.contact{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05)}
-    .contact-left{display:flex;align-items:center;gap:10px}.contact-icon{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:rgba(168,230,0,.08);font-size:14px}
-    .contact-name{font-size:12px;font-weight:700}.contact-type{color:var(--muted);font-size:10px;margin-top:2px}.contact a{color:var(--green2);text-decoration:none;font-size:11px;font-weight:700}
-    footer{text-align:center;color:#515651;font-size:10px;padding:10px 0 25px}
-    @media(max-width:400px){.page{padding:12px}.card,.info-card{padding:16px}.hero-title{font-size:22px}}
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --bg: #080a08;
+      --card: #101310;
+      --card2: #151815;
+      --border: rgba(255, 255, 255, .08);
+      --text: #f4f4f4;
+      --muted: #8d938d;
+      --green: #a8e600;
+      --green2: #c5ff3d;
+      --danger: #ff8585;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(168, 230, 0, .1), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 540px;
+      margin: auto;
+      padding: 18px;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green);
+      color: #0b0d08;
+      font-weight: 900;
+      font-size: 17px;
+      box-shadow: 0 0 20px rgba(168, 230, 0, .12);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #9bd400;
+      background: rgba(168, 230, 0, .07);
+      border: 1px solid rgba(168, 230, 0, .13);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: #0d0f0d;
+      margin-bottom: 18px;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 13/9;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 40px 20px 18px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .9));
+    }
+
+    .hero-title {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -.8px;
+      margin: 0;
+    }
+
+    .hero-subtitle {
+      margin-top: 5px;
+      color: #c7c7c7;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* CARD */
+    .card,
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .18);
+    }
+
+    .credit {
+      text-align: center;
+      color: #626762;
+      font-size: 12px;
+      margin: 2px 0 20px;
+    }
+
+    .credit strong {
+      color: #777d77;
+    }
+
+    .section-title {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* FORM */
+    label {
+      display: block;
+      margin: 16px 0 8px;
+      font-size: 12px;
+      color: #cfd3cf;
+      font-weight: 700;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      height: 48px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      outline: none;
+      background: var(--card2);
+      color: white;
+      font-size: 14px;
+    }
+
+    input[type="text"]::placeholder {
+      color: #666b66;
+    }
+
+    input[type="text"]:focus {
+      border-color: rgba(168, 230, 0, .55);
+      box-shadow: 0 0 0 3px rgba(168, 230, 0, .06);
+    }
+
+    /* UPLOAD */
+    .upload-box {
+      position: relative;
+      border: 1px dashed rgba(168, 230, 0, .28);
+      border-radius: 15px;
+      background: rgba(168, 230, 0, .025);
+      padding: 20px 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .upload-box:hover,
+    .upload-box.dragover {
+      border-color: var(--green);
+      background: rgba(168, 230, 0, .07);
+    }
+
+    .upload-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(168, 230, 0, .1);
+      font-size: 19px;
+    }
+
+    .upload-title {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .upload-info {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .file-name {
+      margin-top: 12px;
+      color: var(--green2);
+      font-size: 11px;
+      word-break: break-all;
+    }
+
+    #htmlFile {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* BUTTON */
+    .deploy-btn {
+      width: 100%;
+      height: 50px;
+      margin-top: 18px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--green);
+      color: #0b0d08;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .deploy-btn:hover {
+      background: var(--green2);
+      transform: translateY(-1px);
+    }
+
+    .deploy-btn:active {
+      transform: scale(.98);
+    }
+
+    .deploy-btn:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* RESULT */
+    #result {
+      display: none;
+      margin-top: 14px;
+      padding: 13px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .035);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    #result.show { display: block; }
+    #result.success { color: #caff58; }
+    #result.error { color: var(--danger); }
+    #result.loading { color: #d6d6d6; }
+
+    #result a {
+      color: var(--green2);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* INFO */
+    .info-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .rules {
+      display: grid;
+      gap: 10px;
+    }
+
+    .rule {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #aeb3ae;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .rule-icon {
+      color: var(--green);
+      flex-shrink: 0;
+      font-weight: 800;
+    }
+
+    .rule strong { color: #d8ddd8; }
+
+    /* CONTACT */
+    .contact-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid rgba(255, 255, 255, .05);
+      transition: .2s;
+    }
+
+    .contact:hover {
+      border-color: rgba(168, 230, 0, .18);
+      background: rgba(168, 230, 0, .035);
+    }
+
+    .contact-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(168, 230, 0, .08);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-name {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contact-type {
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    .contact a {
+      color: var(--green2);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: #515651;
+      font-size: 10px;
+      line-height: 1.6;
+      padding: 10px 0 25px;
+    }
+
+    footer strong { color: #777d77; }
+
+    @media (max-width: 400px) {
+      .page { padding: 12px; }
+      .card, .info-card { padding: 16px; }
+      .hero-title { font-size: 22px; }
+    }
   </style>
 </head>
+
 <body>
+
 <div class="page">
-  <div class="topbar">
-    <div class="brand"><div class="logo">SXC</div><div class="brand-text"><strong>Free Deploy</strong><span>Simple HTML Deployment</span></div></div>
-    <div class="status"><span class="status-dot"></span>Online</div>
-  </div>
 
-  <div class="hero">
-    <img src="https://files.catbox.moe/wnfsgc.jpg" alt="Free Deploy">
-    <div class="hero-overlay"><div class="hero-title">Deploy Website</div><div class="hero-subtitle">Upload HTML kamu dan deploy dengan mudah.</div></div>
-  </div>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">SXC</div>
+      <div class="brand-text">
+        <strong>SxC Free Deploy</strong>
+        <span>Simple HTML Deployment</span>
+      </div>
+    </div>
+    <div class="status">
+      <span class="status-dot"></span> Online
+    </div>
+  </header>
 
-  <div class="card">
-    <div class="credit">Credit by <strong>Lumnztyz6x</strong></div>
-    <div class="section-title">Create Website</div>
-    <div class="section-description">Masukkan nama website dan upload file <strong>index.html</strong> untuk memulai deployment.</div>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://files.catbox.moe/wnfsgc.jpg" alt="SxC Free Deploy - Deploy Website HTML Gratis" loading="eager">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Free Deploy Website</h1>
+      <div class="hero-subtitle">Deploy website HTML kamu secara gratis, cepat, dan mudah.</div>
+    </div>
+  </section>
 
-    <form id="deployForm">
-      <label for="siteName">Nama Website</label>
-      <input type="text" id="siteName" placeholder="contoh: lumnztyz" autocomplete="off" maxlength="50" required>
-
-      <label>File HTML</label>
-      <div class="upload-box" id="uploadBox">
-        <input type="file" id="htmlFile" accept=".html,text/html" required>
-        <div class="upload-icon">↑</div>
-        <div class="upload-title">Pilih file HTML</div>
-        <div class="upload-info">Klik untuk memilih index.html · Maks. 1 MB</div>
-        <div class="file-name" id="fileName">Belum ada file dipilih</div>
+  <!-- MAIN content -->
+  <main>
+    <!-- DEPLOY FORM -->
+    <section class="card">
+      <div class="credit">
+        Credit by <strong>Lumnztyz6x</strong>
       </div>
 
-      <button type="submit" class="deploy-btn" id="deployButton">🚀 Deploy Website</button>
-    </form>
-    <div id="result"></div>
-  </div>
+      <h2 class="section-title">Create Website</h2>
+      <div class="section-description">
+        Buat website gratis dengan mengupload file <strong>index.html</strong>.
+        Setelah deployment selesai, kamu akan mendapatkan URL website yang dapat dibagikan.
+      </div>
 
-  <div class="info-card">
-    <div class="info-title">⚡ Syarat Deployment</div>
-    <div class="rules">
-      <div class="rule"><span class="rule-icon">✓</span><span>File utama harus bernama <strong>index.html</strong>.</span></div>
-      <div class="rule"><span class="rule-icon">✓</span><span>Website yang di-deploy akan bersifat publik.</span></div>
-      <div class="rule"><span class="rule-icon">✓</span><span>Dilarang menggunakan konten ilegal atau phishing.</span></div>
-      <div class="rule"><span class="rule-icon">✓</span><span>Gunakan nama website yang valid dan mudah diingat.</span></div>
-    </div>
-  </div>
+      <form id="deployForm">
+        <label for="siteName">Nama Website</label>
+        <input type="text" id="siteName" placeholder="contoh: lumnztyz" autocomplete="off" maxlength="50" required>
 
-  <div class="info-card">
-    <div class="info-title">👤 Contact Author</div>
-    <div class="contact-list">
-      <div class="contact"><div class="contact-left"><div class="contact-icon">W</div><div><div class="contact-name">WhatsApp</div><div class="contact-type">Channel</div></div></div><a href="https://whatsapp.com/channel/0029Vb7XYjLKgsNyWrRHL10k" target="_blank" rel="noopener">Buka →</a></div>
-      <div class="contact"><div class="contact-left"><div class="contact-icon">T</div><div><div class="contact-name">Telegram</div><div class="contact-type">Community</div></div></div><a href="https://t.me/sixcorecomunity" target="_blank" rel="noopener">Buka →</a></div>
-      <div class="contact"><div class="contact-left"><div class="contact-icon">@</div><div><div class="contact-name">Contact Telegram</div><div class="contact-type">LumnzTyz</div></div></div><a href="https://t.me/LumnzTyz" target="_blank" rel="noopener">Chat →</a></div>
-    </div>
-  </div>
+        <label for="htmlFile">File HTML</label>
+        <div class="upload-box" id="uploadBox" role="button" tabindex="0" aria-label="Pilih file HTML">
+          <input type="file" id="htmlFile" accept=".html,text/html" required>
+          <div class="upload-icon">↑</div>
+          <div class="upload-title">Pilih file HTML</div>
+          <div class="upload-info">Klik untuk memilih index.html · Maks. 1 MB</div>
+          <div class="file-name" id="fileName">Belum ada file dipilih</div>
+        </div>
 
-  <footer>Create by <strong>lumnztyz6x</strong><br>© sixcorecomunity</footer>
+        <button type="submit" class="deploy-btn" id="deployButton">
+          🚀 Deploy Website
+        </button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+
+    <!-- REQUIREMENTS -->
+    <section class="info-card">
+      <h2 class="info-title">⚡ Syarat Deployment</h2>
+      <div class="rules">
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>File utama harus bernama <strong>index.html</strong>.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Ukuran file maksimal <strong>1 MB</strong>.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Website yang di-deploy akan bersifat <strong>publik</strong>.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Dilarang menggunakan konten ilegal atau phishing.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Gunakan nama website yang valid dan mudah diingat.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUTORIAL -->
+    <section class="info-card">
+      <h2 class="info-title">📖 Cara Deploy Website</h2>
+      <div class="rules">
+        <div class="rule">
+          <span class="rule-icon">1.</span>
+          <span><strong>Buat website kamu</strong><br>Siapkan website HTML yang ingin kamu deploy.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">2.</span>
+          <span><strong>Pastikan file bernama index.html</strong><br>Halaman utama website harus menggunakan nama <strong>index.html</strong>.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">3.</span>
+          <span><strong>Masukkan nama website</strong><br>Gunakan huruf kecil, angka, dan tanda <strong>-</strong>.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">4.</span>
+          <span><strong>Upload index.html</strong><br>Klik area upload atau tarik file ke dalam kotak upload.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">5.</span>
+          <span><strong>Klik Deploy Website</strong><br>Tunggu beberapa saat sampai proses deployment selesai.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">6.</span>
+          <span><strong>Buka website</strong><br>Setelah berhasil, klik URL yang muncul pada hasil deployment.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">7.</span>
+          <span><strong>Bagikan URL</strong><br>Website kamu sekarang sudah bisa dibuka dan dibagikan kepada orang lain.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFTER DEPLOY -->
+    <section class="info-card">
+      <h2 class="info-title">🌐 Setelah Berhasil Deploy</h2>
+      <div class="rules">
+        <div class="rule">
+          <span class="rule-icon">‼️</span>
+          <span>
+            Jangan langsung buka website setelah selesai deploy, ganti dulu domainnya. contoh: https://Lumnztyz-iajshj-sixcore1.vercel.app, hilangkan (lajshj-sixcore1), jadi domainnya nanti jadi cuma https://Lumnztyz.vercel.app.
+          </span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Buka URL hasil edit deployment tadi.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Periksa apakah seluruh tampilan website sudah sesuai.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Jika website sudah benar, simpan URL tersebut.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Bagikan URL website ke teman atau media sosial.</span>
+        </div>
+        <div class="rule">
+          <span class="rule-icon">✓</span>
+          <span>Jika ingin memperbarui website, deploy ulang menggunakan nama website yang tersedia.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="info-card">
+      <h2 class="info-title">👤 Contact Author</h2>
+      <div class="contact-list">
+        
+        <div class="contact">
+          <div class="contact-left">
+            <div class="contact-icon">W</div>
+            <div>
+              <div class="contact-name">WhatsApp</div>
+              <div class="contact-type">Channel</div>
+            </div>
+          </div>
+          <a href="https://whatsapp.com/channel/0029Vb7XYjLKgsNyWrRHL10k" target="_blank" rel="noopener noreferrer">Buka →</a>
+        </div>
+
+        <div class="contact">
+          <div class="contact-left">
+            <div class="contact-icon">T</div>
+            <div>
+              <div class="contact-name">Telegram</div>
+              <div class="contact-type">Community</div>
+            </div>
+          </div>
+          <a href="https://t.me/sixcorecomunity" target="_blank" rel="noopener noreferrer">Buka →</a>
+        </div>
+
+        <div class="contact">
+          <div class="contact-left">
+            <div class="contact-icon">@</div>
+            <div>
+              <div class="contact-name">Contact Telegram</div>
+              <div class="contact-type">LumnzTyz</div>
+            </div>
+          </div>
+          <a href="https://t.me/LumnzTyz" target="_blank" rel="noopener noreferrer">Chat →</a>
+        </div>
+
+        <div class="contact">
+          <div class="contact-left">
+            <div class="contact-icon">G</div>
+            <div>
+              <div class="contact-name">GitHub</div>
+              <div class="contact-type">Source Code & Projects</div>
+            </div>
+          </div>
+          <a href="https://github.com/SiX-CoRe/Deploy" target="_blank" rel="noopener noreferrer">Buka →</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    Create by <strong>lumnztyz6x</strong><br>
+    © sixcorecomunity · Free Deploy Website
+  </footer>
+
 </div>
 
 <script>
-const form=document.getElementById("deployForm");
-const siteName=document.getElementById("siteName");
-const fileInput=document.getElementById("htmlFile");
-const uploadBox=document.getElementById("uploadBox");
-const fileName=document.getElementById("fileName");
-const result=document.getElementById("result");
-const deployButton=document.getElementById("deployButton");
-const MAX_SIZE=1024*1024;
+  const form = document.getElementById("deployForm");
+  const siteName = document.getElementById("siteName");
+  const fileInput = document.getElementById("htmlFile");
+  const uploadBox = document.getElementById("uploadBox");
+  const fileName = document.getElementById("fileName");
+  const result = document.getElementById("result");
+  const deployButton = document.getElementById("deployButton");
 
-uploadBox.addEventListener("click",()=>fileInput.click());
+  const MAX_SIZE = 1024 * 1024; // 1 MB
 
-fileInput.addEventListener("change",()=>{
-  const file=fileInput.files[0];
-  if(!file){fileName.textContent="Belum ada file dipilih";return;}
-  if(!file.name.toLowerCase().endsWith(".html")){fileInput.value="";fileName.textContent="File harus berformat .html";showResult("❌ Pilih file HTML (.html).","error");return;}
-  if(file.size>MAX_SIZE){fileInput.value="";fileName.textContent="File terlalu besar";showResult("❌ Ukuran file maksimal 1 MB.","error");return;}
-  fileName.textContent="📄 "+file.name;
-  hideResult();
-});
+  /* FILE PICKER ACTIONS */
+  uploadBox.addEventListener("click", () => fileInput.click());
+  uploadBox.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
 
-uploadBox.addEventListener("dragover",e=>{e.preventDefault();uploadBox.classList.add("dragover")});
-uploadBox.addEventListener("dragleave",()=>uploadBox.classList.remove("dragover"));
-uploadBox.addEventListener("drop",e=>{
-  e.preventDefault();uploadBox.classList.remove("dragover");
-  const file=e.dataTransfer.files[0];
-  if(!file)return;
-  if(!file.name.toLowerCase().endsWith(".html"))return showResult("❌ File harus berformat HTML.","error");
-  if(file.size>MAX_SIZE)return showResult("❌ Ukuran file maksimal 1 MB.","error");
-  fileInput.files=e.dataTransfer.files;
-  fileName.textContent="📄 "+file.name;
-});
+  /* FILE SELECTION VALIDATION */
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+    if (!file) {
+      fileName.textContent = "Belum ada file dipilih";
+      return;
+    }
 
-function showResult(message,type){result.innerHTML=message;result.className="show "+type}
-function hideResult(){result.className="";result.innerHTML=""}
+    if (!file.name.toLowerCase().endsWith(".html")) {
+      fileInput.value = "";
+      fileName.textContent = "File harus berformat .html";
+      showResult("❌ Pilih file HTML (.html).", "error");
+      return;
+    }
 
-form.addEventListener("submit",async e=>{
-  e.preventDefault();
-  const name=siteName.value.trim().toLowerCase();
-  const file=fileInput.files[0];
+    if (file.size > MAX_SIZE) {
+      fileInput.value = "";
+      fileName.textContent = "File terlalu besar";
+      showResult("❌ Ukuran file maksimal 1 MB.", "error");
+      return;
+    }
 
-  if(!name)return showResult("⚠️ Masukkan nama website terlebih dahulu.","error");
-  if(!/^[a-z0-9-]+$/.test(name))return showResult("❌ Nama hanya boleh menggunakan huruf kecil, angka, dan tanda -.","error");
-  if(!file)return showResult("⚠️ Pilih file HTML terlebih dahulu.","error");
-  if(file.name.toLowerCase()!=="index.html")return showResult("❌ File wajib bernama index.html.","error");
-  if(file.size>MAX_SIZE)return showResult("❌ Ukuran file maksimal 1 MB.","error");
+    fileName.textContent = "📄 " + file.name;
+    hideResult();
+  });
 
-  deployButton.disabled=true;
-  deployButton.textContent="⏳ Deploying...";
-  showResult("⏳ Mengirim file dan membuat deployment...","loading");
+  /* DRAG & DROP HANDLERS */
+  uploadBox.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    uploadBox.classList.add("dragover");
+  });
 
-  try{
-    const fd=new FormData();
-    fd.append("siteName",name);
-    fd.append("file",file);
+  uploadBox.addEventListener("dragleave", () => {
+    uploadBox.classList.remove("dragover");
+  });
 
-    const response=await fetch("/api/deploy",{method:"POST",body:fd});
-    const data=await response.json();
+  uploadBox.addEventListener("drop", (e) => {
+    e.preventDefault();
+    uploadBox.classList.remove("dragover");
 
-    if(!response.ok)throw new Error(data.message||"Deployment gagal.");
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
 
-    showResult(`✅ Website berhasil dibuat!<br><br><a href="${data.url}" target="_blank" rel="noopener">🌐 ${data.url}</a>`,"success");
-  }catch(err){
-    console.error(err);
-    showResult("❌ "+err.message,"error");
-  }finally{
-    deployButton.disabled=false;
-    deployButton.textContent="🚀 Deploy Website";
+    if (!file.name.toLowerCase().endsWith(".html")) {
+      showResult("❌ File harus berformat HTML.", "error");
+      return;
+    }
+
+    if (file.size > MAX_SIZE) {
+      showResult("❌ Ukuran file maksimal 1 MB.", "error");
+      return;
+    }
+
+    fileInput.files = e.dataTransfer.files;
+    fileName.textContent = "📄 " + file.name;
+    hideResult();
+  });
+
+  /* UI FEEDBACK HELPERS */
+  function showResult(message, type) {
+    result.innerHTML = message;
+    result.className = "show " + type;
   }
-});
+
+  function hideResult() {
+    result.className = "";
+    result.innerHTML = "";
+  }
+
+  /* SUBMIT & DEPLOY ACTION */
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = siteName.value.trim().toLowerCase();
+    const file = fileInput.files[0];
+
+    /* FORM VALIDATION */
+    if (!name) {
+      showResult("⚠️ Masukkan nama website terlebih dahulu.", "error");
+      return;
+    }
+
+    if (!/^[a-z0-9-]+$/.test(name)) {
+      showResult("❌ Nama hanya boleh menggunakan huruf kecil, angka, dan tanda -.", "error");
+      return;
+    }
+
+    if (!file) {
+      showResult("⚠️ Pilih file HTML terlebih dahulu.", "error");
+      return;
+    }
+
+    if (file.name.toLowerCase() !== "index.html") {
+      showResult("❌ File wajib bernama index.html.", "error");
+      return;
+    }
+
+    if (file.size > MAX_SIZE) {
+      showResult("❌ Ukuran file maksimal 1 MB.", "error");
+      return;
+    }
+
+    /* DEPLOYMENT PROCESS */
+    deployButton.disabled = true;
+    deployButton.textContent = "⏳ Deploying...";
+    showResult("⏳ Mengirim file dan membuat deployment...", "loading");
+
+    try {
+      const fd = new FormData();
+      fd.append("siteName", name);
+      fd.append("file", file);
+
+      const response = await fetch("/api/deploy", {
+        method: "POST",
+        body: fd
+      });
+
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error("Server mengembalikan response yang tidak valid.");
+      }
+
+      if (!response.ok) {
+        throw new Error(data.message || "Deployment gagal.");
+      }
+
+      if (!data.url) {
+        throw new Error("Deployment berhasil tetapi URL tidak ditemukan.");
+      }
+
+      showResult(
+        `✅ Website berhasil dibuat!<br><br>
+        <a href="${escapeHTML(data.url)}" target="_blank" rel="noopener noreferrer">
+          🌐 ${escapeHTML(data.url)}
+        </a>`,
+        "success"
+      );
+
+    } catch (err) {
+      console.error(err);
+      showResult("❌ " + escapeHTML(err.message || "Terjadi kesalahan."), "error");
+    } finally {
+      deployButton.disabled = false;
+      deployButton.textContent = "🚀 Deploy Website";
+    }
+  });
+
+  /* ESCAPE HTML UTILITY */
+  function escapeHTML(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 </script>
+
 </body>
 </html>
